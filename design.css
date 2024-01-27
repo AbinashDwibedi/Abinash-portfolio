@@ -260,7 +260,7 @@ a[class="top-link"]:hover {
 .heading-para {
     /* margin-top: 32px; */
     padding: 0px 2rem;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: var(--text-color-1);
     font-family: 'Roboto Slab',serif;
 }
