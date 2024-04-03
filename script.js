@@ -38,8 +38,8 @@ tm.from(".top-list,.sidebaropenlabel",{
 });
 tm.from(".heading-logo",{
     opacity:0,
-    x : -1000,
-    rotateZ : "-560deg",
+    x : -500,
+    rotateZ : "-360deg",
     duration:2,
 })
 tm.from(".heading-main,.webd,.heading-para",{
