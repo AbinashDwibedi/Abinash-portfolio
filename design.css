@@ -1,0 +1,485 @@
+
+@font-face {
+    font-family: new-1;
+    src: url("Hackout-Eaw5j.otf");
+}
+@font-face {
+    font-family: new-2;
+    src: url("Hackdaddy.otf");
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 23px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 23px;
+    background-color: var(--text-color-1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
+
+html {
+    font-size: 10px;
+    font-family: new-1;
+    scroll-behavior: smooth;
+
+}
+:root{
+    --body-background : linear-gradient(to left top, rgb(8 9 12), #08090c);
+    --text-color-1: #ffbf00;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    /* transition: .4s linear; */
+    user-select: none;
+}
+
+body {
+    /* background-color: #d1ccc5; */
+    scrollbar-gutter: stable both-edges;
+    /* background-image: linear-gradient(to left top, rgb(8 9 12), #08090c); */
+    background-image: var(--body-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.loader {
+    height: 100vh;
+    flex-direction: column;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: 40;
+}
+
+.loader-container {
+    height: 60px;
+    width: 230px;
+}
+
+.loader-box,
+.loader-container,
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-box {
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+}
+
+.loader-boxs {
+    /* background-color: rgb(255, 0, 0); */
+    border-radius: 100%;
+    animation: animate 2s linear infinite;
+
+}
+
+.loader-box1 {
+    animation-delay: 0s;
+}
+
+.loader-box2 {
+    animation-delay: .25s;
+}
+
+.loader-box3 {
+    animation-delay: .75s;
+}
+
+.loader-box4 {
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        height: 10px;
+        width: 10px;
+    }
+
+    50% {
+        height: 50px;
+        width: 50px;
+    }
+
+    100% {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+.loading {
+    margin-top: 10px;
+    font-size:23px;
+    color: white;
+}
+
+/* responsive ness */
+#sidebaropen {
+    display: none;
+
+}
+
+.sidebaropenlabel {
+    display: none;
+}
+
+.left-head {
+    position: static;
+}
+
+div[class^="spinner"] {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0px 12px;
+    z-index: 6;
+    backdrop-filter: blur(17px);
+    background-color: transparent;
+}
+.nav-color{
+    background-color: #08090c;
+}
+.left-head ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a[class="active"] {
+    font-size: 15px;
+    padding: 10px 10px;
+    color: var(--text-color-1);
+    border-radius: 5px;
+}
+
+a[class="top-link"] {
+    font-size: 15px;
+    padding: 10px 12px;
+    transition: color .4s;
+
+}
+
+a[class="top-link"]:hover {
+
+    color: var(--text-color-1);
+    border-radius: 5px;
+}
+
+.cl-change{
+    color: lime;
+}
+.fa-linux{
+    font-size: 10px;
+}
+.intro {
+
+    /* background-image: linear-gradient(to left top, rgb(0 0 0), #001247); */
+    background-image: url("background.jpg");
+    background-position: right;
+    width: 100%;
+    min-height: calc(100vh + 3px);
+    background-attachment: local;
+    background-size: cover;
+    padding: 10px;
+    text-align: center;
+    background-blend-mode: darken;
+    background-color: #00000078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 3px solid var(--text-color-1);
+}
+
+.heading-logo {
+    height: 170px;
+    border-radius: 100%;
+    z-index: 2;
+    border: 4px solid var(--text-color-1);
+    filter: drop-shadow(0px 0px 8rem white);
+    animation: DropShadow 2s linear infinite .1s;
+}
+
+@keyframes DropShadow {
+    0% {
+        filter: drop-shadow(0px 0px 1rem black);
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 1rem yellow);
+    }
+
+    100% {
+        filter: drop-shadow(0px 0px 1rem black);
+    }
+}
+
+.img-back {
+    height: 170px;
+    width: 170px;
+    background-color: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+@keyframes img-back {
+    from {
+        transform: rotatez(0deg);
+    }
+
+    to {
+        transform: rotatez(180deg);
+    }
+}
+
+.heading-para {
+    /* margin-top: 32px; */
+    padding: 0px 20px;
+    font-size:13px;
+    color: var(--text-color-1);
+    line-height: 20px;
+}
+.heading-para ,.experience-about{
+    font-family: new-2;
+}
+.heading-para::first-letter {
+    font-size: 30px;
+}
+
+.head-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 12px 0px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    border-bottom: 2px solid #febe00;
+    background: #0a0c11;
+}
+
+.heading-main {
+    color: yellow;
+    font-size: 25px;
+    font-family: new-1;
+}
+
+.social {
+    font-size: 30px;
+    padding: 0 0.6rem;
+}
+
+.fa-facebook:hover {
+    color: #4747ff;
+}
+
+.fa-youtube:hover {
+    color: rgb(255, 0, 0);
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 0, 157);
+}
+
+.link-logo:hover {
+    background-color: var(--text-color-1);
+}
+
+.experiences {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .5rem;
+    border-bottom: 3px solid var(--text-color-1);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.experience-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+
+}
+
+.logo {
+    font-size: 20rem;
+    text-shadow: .4rem .4rem white;
+}
+
+.experience-about {
+    padding: 5px 14px;
+    color: var(--text-color-1);
+    text-align: right;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.experience-about::first-letter {
+    font-size: 3rem;
+    color: white;
+}
+
+.experience-name {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+    font-size: 2rem;
+}
+
+.projects {
+    margin: 10px;
+
+}
+
+
+.projec {
+    /* width: 500%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-head,.my-experiences {
+    margin-left: 1rem;
+    border-left: 0.5rem solid rgb(255, 191, 0);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+.experience {
+    /* flex-direction: column; */
+    margin: 1rem 2rem;
+    /* width: 100%; */
+    /* flex: 0 1 550px; */
+}
+.ex-name {
+    font-size: 1.4rem;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 1rem;
+}
+.ex-range {
+    /* margin: 10px 15px 10px 100px; */
+    height: 1.4rem;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    z-index: -1;
+    margin-top: 5px;
+}
+.ex-range::after {
+    content: '';
+  width: 34%;
+  height: 1rem;
+  background-color: var(--type-bg-color-2);
+  border-radius: 50px;
+  position: absolute;
+  z-index: -1;
+  inset: .2rem;
+}
+
+.range-1::after {
+    width: 91%;
+    background-color: rgb(229, 83, 45);
+}
+.range-2::after {
+    width: 85%;
+    background-color: rgb(45, 83, 229);
+}
+
+.range-3::after {
+    width: 65%;
+    background-color: rgb(219, 187, 52);
+}
+
+.range-4::after {
+    width: 89%;
+    background-color: #d5d5d5;
+}
+.range-5::after {
+    width: 70%;
+    background-color: red;
+}
+.project {
+    border: 3px solid #FFC107;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    margin: 15px 5px;
+    border-radius: 23px;
+    position: relative;
+}
+.project:hover > .project-link{
+    background: #0a0c11;font-size: 20px;
+    transition: .2s linear background;
+}
+.project-link{
+    display: block;
+    position: absolute;
+    height: 240px;
+    width: 284px;
+    border-radius: 15px;
+    inset: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    transition: .3s linear background;
+}
+
+.project-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 23px;
+    padding: 5px;
+}
+
+
+
+.copyright {
+    margin-top: 50px;
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
