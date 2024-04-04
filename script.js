@@ -31,11 +31,23 @@ document.addEventListener("DOMContentLoaded", () => {
     prom.then(()=>{
         loader.remove();
         let tm = gsap.timeline();
-tm.from(".top-list,.sidebaropenlabel",{
-    y : -100,
-    duration:.5,
-    stagger:.5
-});
+
+let width = window.innerWidth
+if(width > 900){
+    tm.from(".top-list",{
+        y : -100,
+        duration:.5,
+        stagger:.5
+    });
+}
+else{
+    tm.from(".sidebaropenlabel",{
+        y : -100,
+        duration:.5,
+        stagger:.5
+    });
+}
+        
 tm.from(".heading-logo",{
     opacity:0,
     x : -500,
